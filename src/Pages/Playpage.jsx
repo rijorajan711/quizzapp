@@ -13,7 +13,7 @@ function Playpage() {
 
   useEffect(() => {
     const questionTimeOut = setInterval(() => {
-      if (timee > 4) {
+      if (timee > 9) {
         clearInterval(questionTimeOut);
         setTimee(0);
       } else {
@@ -31,9 +31,6 @@ function Playpage() {
   }, [timee]);
 
   useEffect(() => {
-    console.log("count",count)
-    console.log("time",timee)
-
     if (count === 4 && timee === 0) {
      setCompleteMessage(true);
     }
@@ -46,7 +43,7 @@ function Playpage() {
       } else {
         setCount(count + 1);
       }
-    }, 6000);
+    }, 11000);
 
     return () => {
       clearInterval(varsha);
